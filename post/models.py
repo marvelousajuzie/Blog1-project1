@@ -6,3 +6,5 @@ class Blog(models.Model):
     body = models.CharField(max_length = 20000)
     created_at = models.DateTimeField(default = datetime.now)
     
+
+    

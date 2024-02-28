@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +17,7 @@ body {
   padding: 2px;
   font-size: 40px;
   text-align: center;
-  background: #fed1b5;
+  background: #ffbda6;
   border-radius: 5px;
 }
 
@@ -28,7 +27,7 @@ body {
 }
 
 .card {
-   background-color: #fed1b5;
+   background-color: #ffbda6;
    padding: 20px;
    margin-top: 25px;
    border-radius: 5px;
@@ -56,15 +55,12 @@ body {
 
 <div class="row">
   <div class="leftcolumn">
-    {%for blog in blogs reversed%}
     <div class="card">
-        <a style="text-decoration: none; color: black;" href="/post/{{post.id}}">
-          <h2>{{blog.title}}</h2>
-          <h5>{{blog.created_at}}</h5>
-          <p>{{blog.body|truncatewords:20}}</p>
+          <h2>{{blogs.title}}</h2>
+          <h5>{{blogs.created_at}}</h5>
+          <p>{{blogs.body|truncatewords:20}}</p>
         </a>
     </div>
-    {% endfor %}
   </div>
 </div>
 
