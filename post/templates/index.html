@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: white;
+}
+
+.header {
+  padding: 2px;
+  font-size: 40px;
+  text-align: center;
+  background: #ffbda6;
+  border-radius: 5px;
+}
+
+.leftcolumn {   
+  float: left;
+  width: 100%;
+}
+
+.card {
+   background-color: #ffbda6;
+   padding: 20px;
+   margin-top: 25px;
+   border-radius: 5px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Marvel Blog</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+
+    <div class="card">
+      <a style="text-decoration: none; color: black;" href="/post/{{post.id}}">
+        <h2>hbjkl</h2>
+        <h5>ghbjnkl</h5>
+        <p>gyhjnkml</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
