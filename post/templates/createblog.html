@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +18,7 @@ body {
   padding: 2px;
   font-size: 40px;
   text-align: center;
-  background: #ffbda6;
+  background: #fed1b5;
   border-radius: 5px;
 }
 
@@ -27,7 +28,7 @@ body {
 }
 
 .card {
-   background-color: #ffbda6;
+   background-color: #fed1b5;
    padding: 20px;
    margin-top: 25px;
    border-radius: 5px;
@@ -55,12 +56,17 @@ body {
 
 <div class="row">
   <div class="leftcolumn">
-    <div class="card">
-          <h2>{{blogs.title}}</h2>
-          <h5>{{blogs.created_at}}</h5>
-          <p>{{blogs.body}}</p>
-        </a>
-    </div>
+      <form method="POST" action="createblog">
+        {% csrf_token %}
+        <div class="card">
+              <h2>TITLE:</h2>
+              <input type="text" name="title"/>
+              <h5>{{blog.created_at}}</h5>
+              <p>ENTER BLOG:</p>
+              <textarea name="words" rows="25" cols="70"> </textarea> <br>
+              <input type="submit" name="submit"/>
+        </div>
+      </form>
   </div>
 </div>
 

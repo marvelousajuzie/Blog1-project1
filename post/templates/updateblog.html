@@ -55,12 +55,15 @@ body {
 
 <div class="row">
   <div class="leftcolumn">
-    <div class="card">
-          <h2>{{blogs.title}}</h2>
-          <h5>{{blogs.created_at}}</h5>
-          <p>{{blogs.body}}</p>
-        </a>
-    </div>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="card">
+        <h2><input type="text" name="title" value="{{ blog.title}}"> </h2>
+        <h5>{{blog.created_at}}</h5>
+        <textarea name="body" rows="25" cols="50">{{blog.body}}</textarea>
+        <button type="submit">Update</button>
+      </div>
+    </forms>
   </div>
 </div>
 

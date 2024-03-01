@@ -45,6 +45,9 @@ body {
     padding: 0;
   }
 }
+h4{
+  color: red;
+}
 </style>
 </head>
 <body>
@@ -56,13 +59,15 @@ body {
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-          <h2>{{blogs.title}}</h2>
-          <h5>{{blogs.created_at}}</h5>
-          <p>{{blogs.body}}</p>
-        </a>
+      <form method="POST">
+      {%csrf_token%}
+        <h2>ARE YOU SURE YOU WANT TO DELETE THIS BLOG: {{blog.title}}</h2>
+        <button type="submit">Yes, delete</button>
+        <a href="{% url 'index' %}">Cancel</a>
+      
+      </form>
     </div>
   </div>
 </div>
-
 </body>
 </html>
